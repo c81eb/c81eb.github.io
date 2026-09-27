@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artisan Coffee Roasting</title>
+    <!-- Favicon link -->
+    <link rel="icon" type="image/png" href="https://favicon.io/emoji-favicons/hot-beverage/">
+    
+    <style>
+        /* CRAP Principles Applied: Contrast, Repetition, Alignment, Proximity */
+        /* NO generic colors, NO Times New Roman, NO default blue links */
+        :root {
+            --bg-color: #2C1E16; /* Dark espresso background */
+            --text-color: #F4EBD9; /* Cream text */
+            --accent-color: #D4A373; /* Caramel accent */
+            --link-color: #E9C46A;
+            --link-hover: #F4A261;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+        }
+
+        header, main, footer {
+            width: 80%;
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            border-bottom: 2px solid var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: var(--accent-color);
+            font-size: 2.5em;
+        }
+
+        h2 {
+            color: var(--accent-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        /* Navigation */
+        nav a {
+            color: var(--link-color);
+            text-decoration: none;
+            font-weight: bold;
+            padding: 5px 10px;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: var(--link-hover);
+        }
+
+        .nav-divider {
+            color: var(--accent-color);
+            margin: 0 5px;
+        }
+
+        /* Hide all sections by default */
+        section {
+            display: none; 
+            padding: 20px;
+            background-color: rgba(255,255,255,0.05); /* Proximity & Alignment bounding box */
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        /* Figure and Image styling */
+        figure {
+            background-color: #1a110c;
+            padding: 10px;
+            border: 1px solid var(--accent-color);
+            border-radius: 5px;
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 3px;
+        }
+
+        figcaption {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+
+        .ai-prompt {
+            font-style: italic;
+            font-size: 0.9em;
+            color: #ccc;
+        }
+
+        /* Footer buttons */
+        footer {
+            text-align: center;
+            border-top: 2px solid var(--accent-color);
+            margin-top: 40px;
+            padding-top: 20px;
+        }
+
+        .val-btn {
+            background-color: var(--accent-color);
+            color: var(--bg-color);
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            display: inline-block;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Artisan Coffee Roasting</h1>
+        <nav>
+            <a href="#" onclick="showSection('what')">What</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('who')">Who</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('when')">When</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('where')">Where</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('how')">How</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('why')">Why</a> <span class="nav-divider">☕</span>
+            <a href="#" onclick="showSection('ai-prompts')">AI Prompts</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- WHAT SECTION (Default) -->
+        <section id="what">
+            <h2>What is Artisan Coffee Roasting?</h2>
+            <p>Artisan coffee roasting is the craft of carefully applying heat to green coffee beans to transform their chemical and physical properties.</p>
+            <p>Unlike commercial roasting, which focuses on volume, artisan roasting focuses on extracting the unique flavor notes of beans from specific regions.</p>
+            <ul>
+                <li>Highlights single-origin beans.</li>
+                <li>Focuses on light to medium roasts to preserve acidity.</li>
+                <li>Emphasizes the "crack" stages of the bean.</li>
+            </ul>
+            <figure>
+                <img src="images/roasting-beans.jpg" alt="Coffee beans roasting">
+                <figcaption>Freshly roasted coffee beans cooling.</figcaption>
+                <p class="ai-prompt">AI Prompt: A photorealistic, highly detailed macro shot of freshly roasted coffee beans in a metal cooling tray, cinematic lighting.</p>
+            </figure>
+        </section>
+
+        <!-- WHO SECTION -->
+        <section id="who">
+            <h2>About Me: The Roaster</h2>
+            <p>I started my journey into coffee roasting three years ago after tasting a perfectly extracted Ethiopian Yirgacheffe.</p>
+            <p>As an enthusiast, I roast small batches weekly for friends, family, and my own daily pour-over rituals.</p>
+            <p>My philosophy is that good coffee shouldn't be hidden behind cream and sugar; it should be celebrated for its natural, fruity complexity.</p>
+            <figure>
+                <img src="images/pour-over.jpg" alt="Barista pouring coffee">
+                <figcaption>Testing the morning roast with a pour-over.</figcaption>
+                <p class="ai-prompt">AI Prompt: A barista doing a pour-over coffee in a cozy kitchen, warm morning sunlight, shallow depth of field, photorealistic.</p>
+            </figure>
+        </section>
+
+        <!-- WHEN SECTION -->
+        <section id="when">
+            <h2>When to Roast & Brew</h2>
+            <p>Timing is everything in the world of coffee. Roasting is just the first step.</p>
+            <p>After roasting, coffee beans need to "degas" (release carbon dioxide) for roughly 48 to 72 hours before they are optimal for brewing.</p>
+            <table style="width:100%; text-align:left; border-collapse: collapse; margin-bottom: 15px;">
+                <tr style="border-bottom: 1px solid var(--accent-color);"><th>Activity</th><th>Ideal Timeframe</th></tr>
+                <tr><td>Roasting</td><td>Weekends (takes about 1 hour for setup/cleanup)</td></tr>
+                <tr><td>Degassing</td><td>2-4 days post-roast</td></tr>
+                <tr><td>Peak Brewing</td><td>Days 5 through 14 post-roast</td></tr>
+            </table>
+            <figure>
+                <img src="images/coffee-jars.jpg" alt="Coffee timeline">
+                <figcaption>Coffee beans resting in a glass jar.</figcaption>
+                <p class="ai-prompt">AI Prompt: Glass jars filled with roasted coffee beans sitting on a wooden shelf, soft natural lighting, rustic aesthetic.</p>
+            </figure>
+        </section>
+
+        <!-- WHERE SECTION -->
+        <section id="where">
+            <h2>Best Sourcing Locations</h2>
+            <p>The origin of the green coffee bean dictates the final flavor profile in your cup.</p>
+            <p>I primarily source my green beans from small importers who practice direct trade with farmers.</p>
+            <ol>
+                <li><strong>Ethiopia:</strong> Known for floral, tea-like, and berry notes.</li>
+                <li><strong>Colombia:</strong> Balanced, chocolatey, and nutty.</li>
+                <li><strong>Costa Rica:</strong> Clean, bright acidity, sweet honey notes.</li>
+            </ol>
+            <figure>
+                <img src="images/coffee-plant.jpg" alt="Coffee plant">
+                <figcaption>Coffee cherries growing on a branch.</figcaption>
+                <p class="ai-prompt">AI Prompt: Ripe red coffee cherries on a vibrant green coffee plant in a high-altitude tropical farm, photorealistic, 4k.</p>
+            </figure>
+        </section>
+
+        <!-- HOW SECTION -->
+        <section id="how">
+            <h2>How to Roast at Home</h2>
+            <p>You don't need a massive commercial roaster to get started; many hobbyists start with a simple popcorn popper!</p>
+            <p>The key is listening for the "First Crack," which sounds like popcorn popping. This indicates the bean is expanding and the light roast stage has been reached.</p>
+            <p>Here is my standard procedure:</p>
+            <ol>
+                <li>Preheat the roasting drum to 400°F.</li>
+                <li>Drop the green beans in and monitor the temperature curve.</li>
+                <li>Drop the beans into a cooling tray immediately after the first crack finishes.</li>
+            </ol>
+            <figure>
+                <img src="images/home-roaster.jpg" alt="Roasting equipment">
+                <figcaption>A small batch home drum roaster.</figcaption>
+                <p class="ai-prompt">AI Prompt: A sleek, modern home coffee roaster on a kitchen counter, glowing heating elements visible, high quality product photography.</p>
+            </figure>
+        </section>
+
+        <!-- WHY SECTION -->
+        <section id="why">
+            <h2>Why I Love This Hobby</h2>
+            <p>Roasting coffee is the perfect intersection of science and culinary art.</p>
+            <p>It forces you to be present. You have to rely on your sight, smell, and hearing to know exactly when a roast is finished.</p>
+            <p>Plus, sharing a cup of coffee you roasted yourself with a friend is an incredibly rewarding experience.</p>
+            <figure>
+                <img src="images/coffee-cups.jpg" alt="Two coffee cups">
+                <figcaption>Sharing a freshly brewed cup.</figcaption>
+                <p class="ai-prompt">AI Prompt: Two ceramic mugs of black coffee on a wooden table, steam rising, cozy cafe atmosphere, ultra-realistic.</p>
+            </figure>
+        </section>
+
+        <!-- AI PROMPTS SECTION -->
+        <section id="ai-prompts">
+            <h2>AI Usage & Prompts</h2>
+            <p>For this project, I used AI to generate the imagery across the different sections to maintain a consistent visual style.</p>
+            <p>I requested photorealistic images to mimic a professional coffee blog aesthetic, ensuring the aspect ratios were cohesive.</p>
+            <ul>
+                <li><strong>Tools Used:</strong> Midjourney v6 / DALL-E 3 for image generation.</li>
+                <li><strong>Base Prompt Strategy:</strong> Always included "photorealistic, cinematic lighting, cozy kitchen aesthetic" to unify the images.</li>
+                <li><em>Note: Specific prompts used for each image are included in italics within each image's figure caption.</em></li>
+            </ul>
+            <figure>
+                <img src="images/ai-concept.jpg" alt="AI Concept Art">
+                <figcaption>AI visualizing the roasting process.</figcaption>
+                <p class="ai-prompt">AI Prompt: A digital representation of a coffee bean transforming from green to dark brown, glowing data streams, futuristic but grounded, photorealistic.</p>
+            </figure>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            <!-- W3C Validation Links -->
+            <a href="https://validator.w3.org/check?uri=referer" class="val-btn" target="_blank">Validate HTML</a>
+            <a href="https://jigsaw.w3.org/css-validator/check/referer" class="val-btn" target="_blank">Validate CSS</a>
+            <a href="https://wave.webaim.org/report#/" class="val-btn" target="_blank">Accessibility Checker</a>
+        </p>
+        <p>
+            <!-- Link to Design Firm -->
+            Designed by <a href="../calebgilmoredesigns.co/index.html" style="color:var(--link-color);">Caleb Gilmore Designs</a>
+        </p>
+    </footer>
+
+    <!-- JavaScript for SPA navigation -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            const sections = document.querySelectorAll('main section');
+            sections.forEach(sec => {
+                sec.style.display = 'none';
+            });
+            // Show target section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+
+        // Run on load to ensure 'What' is visible first
+        window.onload = function() {
+            showSection('what');
+        };
+    </script>
+</body>
+</html>
