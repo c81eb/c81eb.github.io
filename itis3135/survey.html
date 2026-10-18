@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITIS 3135 | Survey</title>
+    <title>Clever Gecko | Home Security Survey</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
@@ -11,8 +11,71 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <h2>Survey Form Page</h2>
-        <p>This page will contain the FreeCodeCamp Survey project content.</p>
+        <h2 id="title">Home Security Vulnerability Consultation</h2>
+        <p id="description">Take our quick survey to identify weak points in your home's defenses and get customized recommendations.</p>
+
+        <form id="survey-form" method="post" action="#">
+            <fieldset>
+                <legend>About you</legend>
+                <p>
+                    <label for="name">Full name</label><br>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                </p>
+                <p>
+                    <label for="email">Email</label><br>
+                    <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                </p>
+                <p>
+                    <label for="age">Age (optional)</label><br>
+                    <input type="number" id="age" name="age" min="10" max="120" placeholder="Your age">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Your home</legend>
+                <p>
+                    <label for="home-type">Type of home</label><br>
+                    <select id="home-type" name="home-type" required>
+                        <option value="">Select one</option>
+                        <option value="house">House</option>
+                        <option value="apartment">Apartment</option>
+                        <option value="condo">Condo</option>
+                        <option value="dorm">Dorm</option>
+                        <option value="other">Other</option>
+                    </select>
+                </p>
+                <p>Do you already have a security system?</p>
+                <p>
+                    <input type="radio" id="system-yes" name="system" value="yes">
+                    <label for="system-yes">Yes</label>
+                    <input type="radio" id="system-no" name="system" value="no">
+                    <label for="system-no">No</label>
+                    <input type="radio" id="system-unsure" name="system" value="unsure">
+                    <label for="system-unsure">Not sure</label>
+                </p>
+                <p>Which areas worry you most? (Choose all that apply)</p>
+                <p>
+                    <input type="checkbox" id="area-doors" name="areas" value="doors">
+                    <label for="area-doors">Doors</label>
+                    <input type="checkbox" id="area-windows" name="areas" value="windows">
+                    <label for="area-windows">Windows</label>
+                    <input type="checkbox" id="area-garage" name="areas" value="garage">
+                    <label for="area-garage">Garage</label>
+                    <input type="checkbox" id="area-yard" name="areas" value="yard">
+                    <label for="area-yard">Yard</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Anything else?</legend>
+                <p>
+                    <label for="comments">Tell us what keeps you up at night</label><br>
+                    <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Describe your concerns here"></textarea>
+                </p>
+            </fieldset>
+
+            <p><button type="submit" id="submit">Request my consultation</button></p>
+        </form>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>

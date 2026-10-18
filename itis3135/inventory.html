@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ITIS 3135 | Survey</title>
+    <title>Clever Gecko | Warehouse Inventory</title>
     <link rel="stylesheet" href="styles/default.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
@@ -11,8 +11,91 @@
 <body>
     <div data-include="components/header.html"></div>
     <main>
-        <h2>Survey Form Page</h2>
-        <p>This page will contain the FreeCodeCamp Survey project content.</p>
+        <h2>Inventory Tracking System</h2>
+        <p>Manage stock levels for smart locks, sensors, night-vision goggles, and other security hardware.</p>
+
+        <section>
+            <h3>Current stock</h3>
+            <table>
+                <caption>Clever Gecko warehouse inventory</caption>
+                <thead>
+                    <tr>
+                        <th scope="col">SKU</th>
+                        <th scope="col">Item</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">In stock</th>
+                        <th scope="col">Price</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>CG-101</td>
+                        <th scope="row">TailLock Deadbolt</th>
+                        <td>Locks</td>
+                        <td>42</td>
+                        <td>$89.99</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-102</td>
+                        <th scope="row">Sticky Sensor</th>
+                        <td>Sensors</td>
+                        <td>120</td>
+                        <td>$24.99</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-103</td>
+                        <th scope="row">Night Gecko Goggles</th>
+                        <td>Optics</td>
+                        <td>8</td>
+                        <td>$199.00</td>
+                        <td>Low stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-104</td>
+                        <th scope="row">360-Cam</th>
+                        <td>Cameras</td>
+                        <td>35</td>
+                        <td>$149.99</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-105</td>
+                        <th scope="row">Shadow Scout Motion Detector</th>
+                        <td>Sensors</td>
+                        <td>0</td>
+                        <td>$39.99</td>
+                        <td>Backordered</td>
+                    </tr>
+                    <tr>
+                        <td>CG-106</td>
+                        <th scope="row">Glass Guardian Window Alarm</th>
+                        <td>Alarms</td>
+                        <td>64</td>
+                        <td>$19.99</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-107</td>
+                        <th scope="row">GeckoGrip Wall Mount</th>
+                        <td>Accessories</td>
+                        <td>200</td>
+                        <td>$12.50</td>
+                        <td>In stock</td>
+                    </tr>
+                    <tr>
+                        <td>CG-108</td>
+                        <th scope="row">Doorbell Cam Mini</th>
+                        <td>Cameras</td>
+                        <td>5</td>
+                        <td>$79.99</td>
+                        <td>Low stock</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
