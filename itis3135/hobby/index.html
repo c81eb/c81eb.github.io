@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Artisan Coffee Roasting</title>
-    <!-- Favicon link -->
-    <link rel="icon" type="image/png" href="https://favicon.io/emoji-favicons/hot-beverage/">
-    
+    <title>Artisan Coffee Roasting | What Is Artisan Coffee Roasting?</title>
+    <!-- Favicon link (relative path to the site's images folder; this page lives in hobby/) -->
+    <link rel="icon" type="image/png" href="../images/favicon.png">
+
     <style>
         /* CRAP Principles Applied: Contrast, Repetition, Alignment, Proximity */
         /* NO generic colors, NO Times New Roman, NO default blue links */
+        /* Classes used: nav-divider (colors the cup dividers separately from the links), ai-prompt (styles the AI prompt note under each image), val-btn (turns the footer validator links into buttons). Each is needed because these elements have no tag of their own to style. */
         :root {
             --bg-color: #2C1E16; /* Dark espresso background */
             --text-color: #F4EBD9; /* Cream text */
@@ -51,6 +52,16 @@
             padding-left: 10px;
         }
 
+        /* Second font: serif for headings, sans-serif stays on body text */
+        h1, h2 {
+            font-family: Georgia, 'Times New Roman', serif;
+        }
+
+        /* Tagline under the site name */
+        header em {
+            color: var(--text-color);
+        }
+
         /* Navigation */
         nav a {
             color: var(--link-color);
@@ -71,7 +82,7 @@
 
         /* Hide all sections by default */
         section {
-            display: none; 
+            display: none;
             padding: 20px;
             background-color: rgba(255,255,255,0.05); /* Proximity & Alignment bounding box */
             border-radius: 8px;
@@ -105,12 +116,29 @@
             color: #ccc;
         }
 
+        /* Schedule table in the When section (moved out of inline styles) */
+        table {
+            width: 100%;
+            text-align: left;
+            border-collapse: collapse;
+            margin-bottom: 15px;
+        }
+
+        tr:first-child {
+            border-bottom: 1px solid var(--accent-color);
+        }
+
         /* Footer buttons */
         footer {
             text-align: center;
             border-top: 2px solid var(--accent-color);
             margin-top: 40px;
             padding-top: 20px;
+        }
+
+        /* Designer credit link uses the same color as the nav links */
+        footer p a {
+            color: var(--link-color);
         }
 
         .val-btn {
@@ -123,12 +151,22 @@
             display: inline-block;
             margin: 5px;
         }
+
+        /* Small screens: shrink the title and tighten the page padding */
+        @media (max-width: 600px) {
+            h1 { font-size: 1.8em; }
+            header, main, footer { width: 90%; padding: 10px; }
+        }
     </style>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
 
     <header>
         <h1>Artisan Coffee Roasting</h1>
+        <em>"Small batches, big flavor"</em>
+        <!-- Each span with class nav-divider holds one coffee-cup divider between links; needed so the divider can be colored separately from the links (the span and class are justified by that). -->
         <nav>
             <a href="#" onclick="showSection('what')">What</a> <span class="nav-divider">☕</span>
             <a href="#" onclick="showSection('who')">Who</a> <span class="nav-divider">☕</span>
@@ -143,7 +181,7 @@
     <main>
         <!-- WHAT SECTION (Default) -->
         <section id="what">
-            <h2>What is Artisan Coffee Roasting?</h2>
+            <h2>What Is Artisan Coffee Roasting?</h2>
             <p>Artisan coffee roasting is the craft of carefully applying heat to green coffee beans to transform their chemical and physical properties.</p>
             <p>Unlike commercial roasting, which focuses on volume, artisan roasting focuses on extracting the unique flavor notes of beans from specific regions.</p>
             <ul>
@@ -154,7 +192,7 @@
             <figure>
                 <img src="images/roastin-beans.jpg" alt="Coffee beans roasting">
                 <figcaption>Freshly roasted coffee beans cooling.</figcaption>
-                <p class="ai-prompt">AI Prompt: A photorealistic, highly detailed macro shot of freshly roasted coffee beans in a metal cooling tray, cinematic lighting.</p>
+                <p class="ai-prompt"><em>AI Prompt: A photorealistic, highly detailed macro shot of freshly roasted coffee beans in a metal cooling tray, cinematic lighting.</em></p>
             </figure>
         </section>
 
@@ -167,17 +205,17 @@
             <figure>
                 <img src="images/pour-over.jpg" alt="Barista pouring coffee">
                 <figcaption>Testing the morning roast with a pour-over.</figcaption>
-                <p class="ai-prompt">AI Prompt: A barista doing a pour-over coffee in a cozy kitchen, warm morning sunlight, shallow depth of field, photorealistic.</p>
+                <p class="ai-prompt"><em>AI Prompt: A barista doing a pour-over coffee in a cozy kitchen, warm morning sunlight, shallow depth of field, photorealistic.</em></p>
             </figure>
         </section>
 
         <!-- WHEN SECTION -->
         <section id="when">
-            <h2>When to Roast & Brew</h2>
+            <h2>When To Roast & Brew</h2>
             <p>Timing is everything in the world of coffee. Roasting is just the first step.</p>
             <p>After roasting, coffee beans need to "degas" (release carbon dioxide) for roughly 48 to 72 hours before they are optimal for brewing.</p>
-            <table style="width:100%; text-align:left; border-collapse: collapse; margin-bottom: 15px;">
-                <tr style="border-bottom: 1px solid var(--accent-color);"><th>Activity</th><th>Ideal Timeframe</th></tr>
+            <table>
+                <tr><th>Activity</th><th>Ideal Timeframe</th></tr>
                 <tr><td>Roasting</td><td>Weekends (takes about 1 hour for setup/cleanup)</td></tr>
                 <tr><td>Degassing</td><td>2-4 days post-roast</td></tr>
                 <tr><td>Peak Brewing</td><td>Days 5 through 14 post-roast</td></tr>
@@ -185,7 +223,7 @@
             <figure>
                 <img src="images/coffee-jars.jpg" alt="Coffee timeline">
                 <figcaption>Coffee beans resting in a glass jar.</figcaption>
-                <p class="ai-prompt">AI Prompt: Glass jars filled with roasted coffee beans sitting on a wooden shelf, soft natural lighting, rustic aesthetic.</p>
+                <p class="ai-prompt"><em>AI Prompt: Glass jars filled with roasted coffee beans sitting on a wooden shelf, soft natural lighting, rustic aesthetic.</em></p>
             </figure>
         </section>
 
@@ -202,13 +240,13 @@
             <figure>
                 <img src="images/coffee-plant.jpg" alt="Coffee plant">
                 <figcaption>Coffee cherries growing on a branch.</figcaption>
-                <p class="ai-prompt">AI Prompt: Ripe red coffee cherries on a vibrant green coffee plant in a high-altitude tropical farm, photorealistic, 4k.</p>
+                <p class="ai-prompt"><em>AI Prompt: Ripe red coffee cherries on a vibrant green coffee plant in a high-altitude tropical farm, photorealistic, 4k.</em></p>
             </figure>
         </section>
 
         <!-- HOW SECTION -->
         <section id="how">
-            <h2>How to Roast at Home</h2>
+            <h2>How To Roast At Home</h2>
             <p>You don't need a massive commercial roaster to get started; many hobbyists start with a simple popcorn popper!</p>
             <p>The key is listening for the "First Crack," which sounds like popcorn popping. This indicates the bean is expanding and the light roast stage has been reached.</p>
             <p>Here is my standard procedure:</p>
@@ -220,7 +258,7 @@
             <figure>
                 <img src="images/home-roaster.jpg" alt="Roasting equipment">
                 <figcaption>A small batch home drum roaster.</figcaption>
-                <p class="ai-prompt">AI Prompt: A sleek, modern home coffee roaster on a kitchen counter, glowing heating elements visible, high quality product photography.</p>
+                <p class="ai-prompt"><em>AI Prompt: A sleek, modern home coffee roaster on a kitchen counter, glowing heating elements visible, high quality product photography.</em></p>
             </figure>
         </section>
 
@@ -233,7 +271,7 @@
             <figure>
                 <img src="images/coffee-cups.jpg" alt="Two coffee cups">
                 <figcaption>Sharing a freshly brewed cup.</figcaption>
-                <p class="ai-prompt">AI Prompt: Two ceramic mugs of black coffee on a wooden table, steam rising, cozy cafe atmosphere, ultra-realistic.</p>
+                <p class="ai-prompt"><em>AI Prompt: Two ceramic mugs of black coffee on a wooden table, steam rising, cozy cafe atmosphere, ultra-realistic.</em></p>
             </figure>
         </section>
 
@@ -250,7 +288,7 @@
             <figure>
                 <img src="images/ai-concept.jpg" alt="AI Concept Art">
                 <figcaption>AI visualizing the roasting process.</figcaption>
-                <p class="ai-prompt">AI Prompt: A digital representation of a coffee bean transforming from green to dark brown, glowing data streams, futuristic but grounded, photorealistic.</p>
+                <p class="ai-prompt"><em>AI Prompt: A digital representation of a coffee bean transforming from green to dark brown, glowing data streams, futuristic but grounded, photorealistic.</em></p>
             </figure>
         </section>
     </main>
@@ -264,7 +302,7 @@
         </p>
         <p>
             <!-- Link to Design Firm -->
-            Designed by <a href="../calebgilmoredesigns.co/index.html" style="color:var(--link-color);">Caleb Gilmore Designs</a>
+            Designed by <a href="../calebgilmoredesigns.co/index.html">Caleb Gilmore Designs</a>
         </p>
     </footer>
 
@@ -276,8 +314,10 @@
             sections.forEach(sec => {
                 sec.style.display = 'none';
             });
-            // Show target section
-            document.getElementById(sectionId).style.display = 'block';
+            // Show target section and update the tab title to match its h2
+            const section = document.getElementById(sectionId);
+            section.style.display = 'block';
+            document.title = 'Artisan Coffee Roasting | ' + section.querySelector('h2').textContent;
         }
 
         // Run on load to ensure 'What' is visible first
