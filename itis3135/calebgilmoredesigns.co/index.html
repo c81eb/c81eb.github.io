@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gilmore Enterprises | Design Firm</title>
+    <title>Gilmore Enterprises | Our Services</title>
+    <link rel="icon" type="image/png" href="images/favicon.png">
     <style>
 :root {
     --almond-cream: #f1dac4;
@@ -18,7 +19,8 @@ body {
     background-color: var(--almond-cream);
     color: var(--ink-black);
     line-height: 1.6;
-    margin: 0;
+    max-width: 960px;
+    margin: 0 auto;
     padding: 0;
 }
 
@@ -29,21 +31,31 @@ header {
     text-align: center;
 }
 
-main {
-    max-width: 800px;
-    margin: 20px auto;
-    padding: 20px;
-    background-color: white; /* Adds contrast against the background */
-    border: 2px solid var(--dusty-grape);
+header p {
+    margin: 0;
+    font-size: 1.1rem;
+}
+
+h1 {
+    font-family: Georgia, serif;
+    color: var(--almond-cream);
 }
 
 h2, h3 {
+    font-family: Georgia, serif;
     color: var(--prussian-blue);
 }
 
-/* Non-standard bullet style requirement */
+main {
+    margin: 20px auto;
+    padding: 20px;
+    /* white: gives the text contrast against the almond page background */
+    background-color: white;
+    border: 2px solid var(--dusty-grape);
+}
+
 ul {
-    list-style-type: square; 
+    list-style-type: square;
     color: var(--dusty-grape);
     font-weight: bold;
 }
@@ -56,20 +68,42 @@ footer {
     margin-top: 40px;
 }
 
+a,
+a:visited {
+    color: #0d0c1d;
+    text-decoration: underline;
+}
+
+footer a,
+footer a:visited {
+    color: #f1dac4;
+}
+
+@media (max-width: 600px) {
+    body {
+        font-size: 0.95rem;
+    }
+    main {
+        margin: 10px;
+        padding: 12px;
+    }
+}
     </style>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js"></script>
 </head>
 <body>
     <header>
-        <!-- Find a free logo on openclipart.org, save it to your new folder, and link it here -->
-        <img src="logo.png" alt="Gilmore Enterprises Logo" width="75">
+        <img src="images/logo.png" alt="Gilmore Enterprises Logo" width="75">
         <h1>Gilmore Enterprises</h1>
+        <p><em>"Your vision, built right."</em></p>
     </header>
 
     <main>
         <h2>Our Services</h2>
-        
+
         <p>Gilmore Enterprises is a forward-thinking web development and consulting firm dedicated to building high-quality, accessible, and modern web applications.</p>
-        
+
         <h3>Why Choose Us?</h3>
         <ul>
             <li>Lightning-fast page load speeds</li>
@@ -80,7 +114,7 @@ footer {
         </ul>
 
         <p>Whether you need a simple landing page or a complex web application, we can bring your vision to life by transforming your requirements into a polished, user-friendly digital experience.</p>
-        
+
         <section>
             <h3>Contact Information</h3>
             <address>
@@ -92,7 +126,7 @@ footer {
     </main>
 
     <footer>
-        <p>Page designed by <a href="itis3135/calebgilmoredesigns.co/index.html">Gilmore Enterprises</a> &copy;2026</p>
+        <p>Page designed by <a href="index.html">Gilmore Enterprises</a> &copy;2026</p>
     </footer>
 </body>
 </html>
