@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Gilmore's Clever Gecko | ITIS3135 | Everything Pictures</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div data-include="components/header.html"></div>
+    <main>
+        <!-- Comment: the div elements with class "img-row" are needed to line figures up side by side with flexbox, because no semantic element does that. The class "same-size" (in default.css) gives both enlarging demo images the same displayed width. Only two inline styles are used (style="width:600px" and style="width:463px"); they are on purpose, because the assignment asks for CSS resizing of the original image. -->
+        <h2>Everything Pictures</h2>
+        <p>This page is a hands-on lab for how images work on the web. It uses one very large photo from Pexels and one photo I took myself to compare file formats (JPG, GIF and PNG), greyscale and black and white versions, and file sizes. It also shows the difference between resizing with CSS and resizing in an editor, and what happens to an image when its proportions are changed or it is enlarged too much.</p>
+
+        <!-- ===================== SECTION 1: PEXELS PHOTO ===================== -->
+        <section>
+            <h3>Demonstrating Image Formats and Resizing with a Light Painting Photo from Pexels.com</h3>
+            <p>I picked this photo because the swirling blue and purple light trails are full of fine detail, which makes quality loss easy to see. It was taken by <a href="https://www.pexels.com/photo/green-and-pink-abstract-painting-10827983/" target="_blank" rel="noopener">Merlin Lightpainting on Pexels</a>, a light painting artist who creates original in-camera photography using light painting. The original is a JPEG that is 6000 &times; 4000 pixels and 713 KB (about 0.71 MB). The version shown here was resized to 600 &times; 400.</p>
+
+            <figure>
+                <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x400.jpg" width="600" height="400" alt="Swirling blue and purple light painting">
+                <figcaption>Light painting by Merlin Lightpainting, resized to 600 &times; 400 for the web.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Image</h4>
+                <p>Click to open the image in its original JPG format:
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.jpg" target="_blank" rel="noopener">Original JPG</a> |
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.gif" target="_blank" rel="noopener">Original as GIF</a> |
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a> |
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-bw.png" target="_blank" rel="noopener">Black and White</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+                <figure>
+                    <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.jpg" style="width:600px" alt="Light painting shrunk with CSS only">
+                    <figcaption>The full 6000 &times; 4000 original displayed at 600px wide with CSS (10%). It looks small, but the browser still downloads all 713 KB.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x400.jpg" width="600" height="400" alt="Light painting resized in an image editor">
+                    <figcaption>Resized in an editor to 600 &times; 400 with proportions locked. It looks sharp and loads much faster.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <div class="img-row">
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x268.jpg" width="600" height="268" alt="Light painting squashed vertically">
+                        <figcaption>600 &times; 268: width kept, height reduced 33%. Squashed flat.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x180.jpg" width="600" height="180" alt="Light painting squashed vertically even more">
+                        <figcaption>600 &times; 180: height reduced another 33%. Even flatter.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-402x400.jpg" width="402" height="400" alt="Light painting squeezed horizontally">
+                        <figcaption>402 &times; 400: height kept, width reduced 33%. Squeezed narrow.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-269x400.jpg" width="269" height="400" alt="Light painting squeezed horizontally even more">
+                        <figcaption>269 &times; 400: width reduced another 33%. Even narrower.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <div class="img-row">
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x400.jpg" style="width:300px" alt="600 pixel wide version displayed at 300px">
+                        <figcaption>The 600 &times; 400 version displayed at 300px wide. It stays crisp.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-150x100.jpg" style="width:300px" alt="150 pixel wide version stretched to 300px">
+                        <figcaption>The 150 &times; 100 version (25%) stretched to the same 300px. It looks blurry because the browser has to invent pixels.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+
+        <hr>
+
+        <!-- ===================== SECTION 2: PERSONAL PHOTO ===================== -->
+        <section>
+            <h3>Demonstrating Proportions with My Own Photo of a Frisbee Next to My Head</h3>
+            <p>I took this photo with my iPhone 16 Pro. I chose a frisbee because it is perfectly round, so any stretching shows up immediately next to my face. The original is a portrait JPEG that is 2316 &times; 3088 pixels and 949 KB (about 0.95 MB). The version shown here was resized to 600 &times; 800.</p>
+
+            <figure>
+                <img src="images/frisbee-next-to-head@calebgilmore-600x800.jpg" width="600" height="800" alt="Me with a frisbee next to my head">
+                <figcaption>Frisbee next to my head, resized to 600 &times; 800 with the portrait proportions kept.</figcaption>
+            </figure>
+
+            <article>
+                <h4>Original Image</h4>
+                <p>Click to open the image in its original JPG format:
+                    <a href="images/frisbee-next-to-head@calebgilmore.jpg" target="_blank" rel="noopener">Original JPG</a> |
+                    <a href="images/frisbee-next-to-head@calebgilmore.gif" target="_blank" rel="noopener">Original as GIF</a> |
+                    <a href="images/frisbee-next-to-head@calebgilmore-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a> |
+                    <a href="images/frisbee-next-to-head@calebgilmore-bw.png" target="_blank" rel="noopener">Black and White</a>
+                </p>
+            </article>
+
+            <article>
+                <h4>Downsizing Images with CSS</h4>
+                <figure>
+                    <img src="images/frisbee-next-to-head@calebgilmore.jpg" style="width:463px" alt="Frisbee photo shrunk with CSS only">
+                    <figcaption>The full 2316 &times; 3088 original displayed at 463px wide with CSS (20%). The proportions are right, but the browser still downloads all 949 KB.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Proper Reduction of Image with Editor</h4>
+                <figure>
+                    <img src="images/frisbee-next-to-head@calebgilmore-600x800.jpg" width="600" height="800" alt="Frisbee photo resized in an image editor">
+                    <figcaption>Resized in an editor to 600 &times; 800 with proportions locked. The frisbee is still round.</figcaption>
+                </figure>
+            </article>
+
+            <article>
+                <h4>Improper Image Proportions with CSS</h4>
+                <div class="img-row">
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-600x536.jpg" width="600" height="536" alt="Frisbee photo squashed vertically">
+                        <figcaption>600 &times; 536: width kept, height reduced 33%. The frisbee turns into an oval.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-600x359.jpg" width="600" height="359" alt="Frisbee photo squashed vertically even more">
+                        <figcaption>600 &times; 359: height reduced another 33%. A very wide oval.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-402x800.jpg" width="402" height="800" alt="Frisbee photo squeezed horizontally">
+                        <figcaption>402 &times; 800: height kept, width reduced 33%. Tall and skinny.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-269x800.jpg" width="269" height="800" alt="Frisbee photo squeezed horizontally even more">
+                        <figcaption>269 &times; 800: width reduced another 33%. Even skinnier.</figcaption>
+                    </figure>
+                </div>
+            </article>
+
+            <article>
+                <h4>Improper Enlarging with CSS</h4>
+                <div class="img-row">
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-600x800.jpg" style="width:300px" alt="600 pixel wide version displayed at 300px">
+                        <figcaption>The 600 &times; 800 version displayed at 300px wide. It stays crisp.</figcaption>
+                    </figure>
+                    <figure>
+                        <img src="images/frisbee-next-to-head@calebgilmore-150x200.jpg" style="width:300px" alt="150 pixel wide version stretched to 300px">
+                        <figcaption>The 150 &times; 200 version (25%) stretched to the same 300px. It looks blurry and blocky.</figcaption>
+                    </figure>
+                </div>
+            </article>
+        </section>
+    </main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.min.js"></script>
+</body>
+</html>

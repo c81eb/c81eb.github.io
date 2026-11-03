@@ -59,3 +59,17 @@ blockquote {
     background-color: #e9ecef;
     padding: 10px 15px;
 }
+/* Pictures page: side-by-side image rows */
+.img-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    align-items: flex-start;
+}
+.img-row figure {
+    margin: 0;
+}
+/* Pictures page: enlarging demo - both images get the same displayed width */
+.same-size {
+    width: 300px;
+}
