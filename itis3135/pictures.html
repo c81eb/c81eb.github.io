@@ -12,7 +12,7 @@
 <body>
 <div data-include="components/header.html"></div>
     <main>
-        <!-- Comment: the div elements with class "img-row" are needed to line figures up side by side with flexbox, because no semantic element does that. The class "same-size" (in default.css) gives both enlarging demo images the same displayed width. Only two inline styles are used (style="width:600px" and style="width:463px"); they are on purpose, because the assignment asks for CSS resizing of the original image. -->
+        <!-- Comment: the div elements with class "img-row" are needed to line figures up side by side with flexbox, because no semantic element does that. The class "same-size" (in default.css) gives both enlarging demo images the same displayed width. Only two inline width declarations are used (600px and 463px); they are on purpose, because the assignment asks for CSS resizing of the original image. -->
         <h2>Everything Pictures</h2>
         <p>This page is a hands-on lab for how images work on the web. It uses one very large photo from Pexels and one photo I took myself to compare file formats (JPG, GIF and PNG), greyscale and black and white versions, and file sizes. It also shows the difference between resizing with CSS and resizing in an editor, and what happens to an image when its proportions are changed or it is enlarged too much.</p>
 
@@ -30,9 +30,9 @@
                 <h4>Original Image</h4>
                 <p>Click to open the image in its original JPG format:
                     <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.jpg" target="_blank" rel="noopener">Original JPG</a> |
-                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.gif" target="_blank" rel="noopener">Original as GIF</a> |
-                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a> |
-                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-bw.png" target="_blank" rel="noopener">Black and White</a>
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels.gif">Original as GIF</a> |
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-greyscale.jpg">Greyscale</a> |
+                    <a href="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-bw.png">Black and White</a>
                 </p>
             </article>
 
@@ -78,11 +78,11 @@
                 <h4>Improper Enlarging with CSS</h4>
                 <div class="img-row">
                     <figure>
-                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x400.jpg" style="width:300px" alt="600 pixel wide version displayed at 300px">
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-600x400.jpg" class="same-size" alt="600 pixel wide version displayed at 300px">
                         <figcaption>The 600 &times; 400 version displayed at 300px wide. It stays crisp.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-150x100.jpg" style="width:300px" alt="150 pixel wide version stretched to 300px">
+                        <img src="images/green-and-pink-abstract-painting-10827983@merlin-lightpainting_pexels-150x100.jpg" class="same-size" alt="150 pixel wide version stretched to 300px">
                         <figcaption>The 150 &times; 100 version (25%) stretched to the same 300px. It looks blurry because the browser has to invent pixels.</figcaption>
                     </figure>
                 </div>
@@ -105,9 +105,9 @@
                 <h4>Original Image</h4>
                 <p>Click to open the image in its original JPG format:
                     <a href="images/frisbee-next-to-head@calebgilmore.jpg" target="_blank" rel="noopener">Original JPG</a> |
-                    <a href="images/frisbee-next-to-head@calebgilmore.gif" target="_blank" rel="noopener">Original as GIF</a> |
-                    <a href="images/frisbee-next-to-head@calebgilmore-greyscale.jpg" target="_blank" rel="noopener">Greyscale</a> |
-                    <a href="images/frisbee-next-to-head@calebgilmore-bw.png" target="_blank" rel="noopener">Black and White</a>
+                    <a href="images/frisbee-next-to-head@calebgilmore.gif">Original as GIF</a> |
+                    <a href="images/frisbee-next-to-head@calebgilmore-greyscale.jpg">Greyscale</a> |
+                    <a href="images/frisbee-next-to-head@calebgilmore-bw.png">Black and White</a>
                 </p>
             </article>
 
@@ -153,11 +153,11 @@
                 <h4>Improper Enlarging with CSS</h4>
                 <div class="img-row">
                     <figure>
-                        <img src="images/frisbee-next-to-head@calebgilmore-600x800.jpg" style="width:300px" alt="600 pixel wide version displayed at 300px">
+                        <img src="images/frisbee-next-to-head@calebgilmore-600x800.jpg" class="same-size" alt="600 pixel wide version displayed at 300px">
                         <figcaption>The 600 &times; 800 version displayed at 300px wide. It stays crisp.</figcaption>
                     </figure>
                     <figure>
-                        <img src="images/frisbee-next-to-head@calebgilmore-150x200.jpg" style="width:300px" alt="150 pixel wide version stretched to 300px">
+                        <img src="images/frisbee-next-to-head@calebgilmore-150x200.jpg" class="same-size" alt="150 pixel wide version stretched to 300px">
                         <figcaption>The 150 &times; 200 version (25%) stretched to the same 300px. It looks blurry and blocky.</figcaption>
                     </figure>
                 </div>
