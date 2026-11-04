@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Gilmore's Clever Gecko | ITIS3135 | Introduction Form</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div data-include="components/header.html"></div>
+    <main>
+        <!-- Comment: id "form" is the form that scripts/introduction.js listens to. id "courses" is the fieldset that holds the course rows. id "add-course" and id "clear" are the Add Course and Clear buttons the script attaches click handlers to. Class "course" marks one course row so the script can find, copy, reset and delete rows. -->
+        <h2>Introduction Form</h2>
+        <h3>Please Submit the Form Below</h3>
+
+        <form id="form">
+            <fieldset>
+                <legend>My Name and Mascot</legend>
+                <label>First Name: <input type="text" name="firstName" value="Caleb" placeholder="e.g., Caleb" required></label>
+                <label>Middle Name or Initial (optional): <input type="text" name="middleName" placeholder="e.g., A."></label>
+                <label>Nickname or Preferred Name (optional): <input type="text" name="nickname" value="Adrian" placeholder="e.g., Adrian"></label>
+                <label>Last Name: <input type="text" name="lastName" value="Gilmore" placeholder="e.g., Gilmore" required></label>
+                <label>Mascot Adjective: <input type="text" name="adjectives" value="Clever" placeholder="e.g., Clever" required></label>
+                <label>Mascot Animal: <input type="text" name="animal" value="Gecko" placeholder="e.g., Gecko" required></label>
+                <label>Divider (such as ~, | or ♥): <input type="text" name="prettyNameDivider" value="|" placeholder="e.g., |" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>Acknowledgment</legend>
+                <label>Acknowledgment Statement: <textarea name="acknowledgment" rows="3" placeholder="e.g., I understand that this is a public document." required>I understand that this is a public document, and I won't put anything here I wouldn't want anyone to see.</textarea></label>
+                <label>Acknowledgment Date: <input type="date" name="acknowledgmentDate" value="2026-11-04" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>My Picture</legend>
+                <label>Picture (leave empty to use my original image): <input type="file" name="img" accept="image/*"></label>
+                <label>Picture Caption: <input type="text" name="caption" value="Caleb at UNC Charlotte" placeholder="e.g., Caleb at UNC Charlotte" required></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>About Me</legend>
+                <label>Personal Statement: <textarea name="statement" rows="3" placeholder="e.g., Student at UNC Charlotte studying Computer Science." required>Student at UNC Charlotte studying Computer Science, interested in web development and software engineering.</textarea></label>
+                <label>Personal Background: <input type="text" name="personalBackground" value="Student at UNC Charlotte studying Computer Science." placeholder="e.g., Student at UNC Charlotte" required></label>
+                <label>Professional Background: <input type="text" name="professionalBackground" value="Interested in web development and software engineering." placeholder="e.g., Interested in web development" required></label>
+                <label>Academic Background: <input type="text" name="academicBackground" value="Undergraduate student." placeholder="e.g., Undergraduate student" required></label>
+                <label>Background in this Subject: <input type="text" name="subjectBackground" value="HTML, CSS, and general web design concepts." placeholder="e.g., HTML and CSS" required></label>
+                <label>Primary Work Computer: <input type="text" name="primaryWorkComputer" value="Macbook." placeholder="e.g., Macbook" required></label>
+                <label>Primary Work Location: <input type="text" name="primaryWorkLocation" value="Apartment." placeholder="e.g., Apartment" required></label>
+                <label>Alternate Computer: <input type="text" name="alternateComputerLocation" value="Windows" placeholder="e.g., Windows" required></label>
+            </fieldset>
+
+            <fieldset id="courses">
+                <legend>Courses I'm Taking &amp; Why</legend>
+                <fieldset class="course">
+                    <legend>Course</legend>
+                    <label>Department: <input type="text" name="department" value="ITIS" placeholder="e.g., ITIS" required></label>
+                    <label>Number: <input type="text" name="courseNumber" value="3135" placeholder="e.g., 3135" required></label>
+                    <label>Name: <input type="text" name="courseTitle" value="Web App Development" placeholder="e.g., Web App Development" required></label>
+                    <label>Reason: <input type="text" name="reasonForTaking" value="To gain hands-on experience building web applications." placeholder="e.g., To build web applications" required></label>
+                </fieldset>
+                <fieldset class="course">
+                    <legend>Course</legend>
+                    <label>Department: <input type="text" name="department" value="ITSC" placeholder="e.g., ITIS" required></label>
+                    <label>Number: <input type="text" name="courseNumber" value="1213" placeholder="e.g., 3135" required></label>
+                    <label>Name: <input type="text" name="courseTitle" value="Programming" placeholder="e.g., Web App Development" required></label>
+                    <label>Reason: <input type="text" name="reasonForTaking" value="To learn basic programming." placeholder="e.g., To build web applications" required></label>
+                </fieldset>
+                <button type="button" id="add-course">Add Course</button>
+            </fieldset>
+
+            <fieldset>
+                <legend>Quote and Extras</legend>
+                <label>Quote (without quotation marks): <input type="text" name="quote" value="Simplicity is prerequisite for reliability." placeholder="e.g., Simplicity is prerequisite for reliability." required></label>
+                <label>Quote Author: <input type="text" name="quoteAuthor" value="Edsger W. Dijkstra" placeholder="e.g., Edsger W. Dijkstra" required></label>
+                <label>Funny or Interesting Item (optional): <input type="text" name="funnyItem" value="I enjoy playing sports and playing video games." placeholder="e.g., I enjoy playing sports"></label>
+                <label>Something I Would Like to Share (optional): <input type="text" name="somethingToShare" placeholder="e.g., I like to travel"></label>
+            </fieldset>
+
+            <fieldset>
+                <legend>My Links</legend>
+                <label>CLT Web: <input type="url" name="link1" value="https://webpages.charlotte.edu/cgilmo11/" placeholder="https://webpages.charlotte.edu/yourid/" required></label>
+                <label>GitHub.io: <input type="url" name="link2" value="https://c81eb.github.io/" placeholder="https://yourname.github.io/" required></label>
+                <label>GitHub: <input type="url" name="link3" value="https://github.com/c81eb" placeholder="https://github.com/yourname" required></label>
+                <label>freeCodeCamp: <input type="url" name="link4" value="https://www.freecodecamp.org/c81eb" placeholder="https://www.freecodecamp.org/yourname" required></label>
+                <label>Codecademy: <input type="url" name="link5" value="https://www.codecademy.com/profiles/array8146532926" placeholder="https://www.codecademy.com/profiles/yourname" required></label>
+                <label>LinkedIn: <input type="url" name="link6" value="https://www.linkedin.com/in/calebgilmore" placeholder="https://www.linkedin.com/in/yourname" required></label>
+            </fieldset>
+
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+            <button type="button" id="clear">Clear</button>
+        </form>
+    </main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.min.js"></script>
+<script src="scripts/introduction.js"></script>
+</body>
+</html>

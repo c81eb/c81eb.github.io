@@ -73,3 +73,13 @@ blockquote {
 .same-size {
     width: 300px;
 }
+/* Form page: labels and fields stacked, fields sized to fit */
+label { display: block; margin: 0.5rem 0; }
+input[type="text"], input[type="url"], input[type="date"], textarea {
+    display: block;
+    width: 100%;
+    max-width: 40rem;
+    box-sizing: border-box;
+}
+fieldset { margin: 1rem 0; }
+button { margin: 0.5rem 0.5rem 0.5rem 0; }
