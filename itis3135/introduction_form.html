@@ -12,7 +12,7 @@
 <body>
 <div data-include="components/header.html"></div>
     <main>
-        <!-- Comment: id "form" is the form that scripts/introduction.js listens to. id "courses" is the fieldset that holds the course rows. id "add-course" and id "clear" are the Add Course and Clear buttons the script attaches click handlers to. Class "course" marks one course row so the script can find, copy, reset and delete rows. -->
+        <!-- Comment: id "form" is the form that scripts/introduction.js and scripts/generate-code.js listen to. id "courses" is the fieldset that holds the course rows. id "add-course" and id "clear" are the Add Course and Clear buttons the script attaches click handlers to. Class "course" marks one course row so the scripts can find, copy, reset and delete rows. ids "generate-html", "generate-json" and "generate-xml" are the buttons that scripts/generate-code.js uses to show raw code. id "code-output" is the section where the generated textareas are appended. -->
         <h2>Introduction Form</h2>
         <h3>Please Submit the Form Below</h3>
 
@@ -92,10 +92,16 @@
             <button type="submit">Submit</button>
             <button type="reset">Reset</button>
             <button type="button" id="clear">Clear</button>
+            <button type="button" id="generate-html">Generate HTML</button>
+            <button type="button" id="generate-json">Generate JSON</button>
+            <button type="button" id="generate-xml">Generate XML</button>
         </form>
+
+        <div id="code-output" aria-live="polite"></div>
     </main>
 <div data-include="components/footer.html"></div>
 <script src="scripts/HTMLInclude.min.js"></script>
 <script src="scripts/introduction.js"></script>
+<script src="scripts/generate-code.js"></script>
 </body>
 </html>
