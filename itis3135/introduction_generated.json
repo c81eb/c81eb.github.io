@@ -38,10 +38,30 @@
   "quoteAuthor": "Edsger W. Dijkstra",
   "funnyItem": "I enjoy playing sports and playing video games.",
   "somethingToShare": "",
-  "link1": "https://webpages.charlotte.edu/cgilmo11/",
-  "link2": "https://c81eb.github.io/",
-  "link3": "https://github.com/c81eb",
-  "link4": "https://www.freecodecamp.org/c81eb",
-  "link5": "https://www.codecademy.com/profiles/array8146532926",
-  "link6": "https://www.linkedin.com/in/calebgilmore"
+  "footerLinks": [
+    {
+      "name": "CLT Web",
+      "href": "https://webpages.charlotte.edu/cgilmo11/"
+    },
+    {
+      "name": "GitHub.io",
+      "href": "https://c81eb.github.io/"
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/c81eb"
+    },
+    {
+      "name": "freeCodeCamp",
+      "href": "https://www.freecodecamp.org/c81eb"
+    },
+    {
+      "name": "Codecademy",
+      "href": "https://www.codecademy.com/profiles/array8146532926"
+    },
+    {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/in/calebgilmore"
+    }
+  ]
 }

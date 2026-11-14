@@ -100,8 +100,8 @@
             somethingToShare: val('somethingToShare')
         };
 
-        LINK_LABELS.forEach(function (label, i) {
-            data['link' + (i + 1)] = val('link' + (i + 1));
+        data.footerLinks = LINK_LABELS.map(function (label, i) {
+            return { name: label, href: val('link' + (i + 1)) };
         });
         return data;
     }
@@ -157,8 +157,8 @@
         lines.push('</blockquote>');
         lines.push('');
         lines.push('<ul>');
-        LINK_LABELS.forEach(function (label, i) {
-            lines.push('    <li><a href="' + esc(d['link' + (i + 1)]) + '">' + esc(label) + '</a></li>');
+        d.footerLinks.forEach(function (l) {
+            lines.push('    <li><a href="' + esc(l.href) + '">' + esc(l.name) + '</a></li>');
         });
         lines.push('</ul>');
         return lines.join('\n');
@@ -206,9 +206,14 @@
             lines.push(tag(k, d[k], '    '));
         });
 
-        LINK_LABELS.forEach(function (label, i) {
-            lines.push(tag('link' + (i + 1), d['link' + (i + 1)], '    '));
+        lines.push('    <footerLinks>');
+        d.footerLinks.forEach(function (l) {
+            lines.push('        <link>');
+            lines.push(tag('name', l.name, '            '));
+            lines.push(tag('href', l.href, '            '));
+            lines.push('        </link>');
         });
+        lines.push('    </footerLinks>');
 
         lines.push('</introduction>');
         return lines.join('\n');
