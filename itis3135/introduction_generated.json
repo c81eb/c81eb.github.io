@@ -41,27 +41,27 @@
   "footerLinks": [
     {
       "label": "CLT Web",
-      "href": "https://webpages.charlotte.edu/cgilmo11/"
+      "url": "https://webpages.charlotte.edu/cgilmo11/"
     },
     {
       "label": "GitHub.io",
-      "href": "https://c81eb.github.io/"
+      "url": "https://c81eb.github.io/"
     },
     {
       "label": "GitHub",
-      "href": "https://github.com/c81eb"
+      "url": "https://github.com/c81eb"
     },
     {
       "label": "freeCodeCamp",
-      "href": "https://www.freecodecamp.org/c81eb"
+      "url": "https://www.freecodecamp.org/c81eb"
     },
     {
       "label": "Codecademy",
-      "href": "https://www.codecademy.com/profiles/array8146532926"
+      "url": "https://www.codecademy.com/profiles/array8146532926"
     },
     {
       "label": "LinkedIn",
-      "href": "https://www.linkedin.com/in/calebgilmore"
+      "url": "https://www.linkedin.com/in/calebgilmore"
     }
   ]
 }

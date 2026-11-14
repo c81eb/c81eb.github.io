@@ -101,7 +101,7 @@
         };
 
         data.footerLinks = LINK_LABELS.map(function (label, i) {
-            return { label: label, href: val('link' + (i + 1)) };
+            return { label: label, url: val('link' + (i + 1)) };
         });
         return data;
     }
@@ -158,7 +158,7 @@
         lines.push('');
         lines.push('<ul>');
         d.footerLinks.forEach(function (l) {
-            lines.push('    <li><a href="' + esc(l.href) + '">' + esc(l.label) + '</a></li>');
+            lines.push('    <li><a href="' + esc(l.url) + '">' + esc(l.label) + '</a></li>');
         });
         lines.push('</ul>');
         return lines.join('\n');
@@ -210,7 +210,7 @@
         d.footerLinks.forEach(function (l) {
             lines.push('        <link>');
             lines.push(tag('label', l.label, '            '));
-            lines.push(tag('href', l.href, '            '));
+            lines.push(tag('url', l.url, '            '));
             lines.push('        </link>');
         });
         lines.push('    </footerLinks>');
