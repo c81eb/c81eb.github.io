@@ -83,8 +83,8 @@
             prettyNameDivider: val('prettyNameDivider'),
             img: img,
             caption: val('caption'),
-            statement: val('statement'),
             personalInfo: {
+                statement: val('statement'),
                 personalBackground: val('personalBackground'),
                 professionalBackground: val('professionalBackground'),
                 academicBackground: val('academicBackground'),
@@ -179,12 +179,12 @@
 
         ['firstName', 'middleName', 'nickname', 'lastName', 'acknowledgment',
             'acknowledgmentDate', 'adjectives', 'animal', 'prettyNameDivider', 'img',
-            'caption', 'statement'].forEach(function (k) {
+            'caption'].forEach(function (k) {
             lines.push(tag(k, d[k], '    '));
         });
 
         lines.push('    <personalInfo>');
-        ['personalBackground', 'professionalBackground', 'academicBackground',
+        ['statement', 'personalBackground', 'professionalBackground', 'academicBackground',
             'primaryWorkComputer', 'primaryWorkLocation', 'alternateComputerLocation'].forEach(function (k) {
             lines.push(tag(k, d.personalInfo[k], '        '));
         });
