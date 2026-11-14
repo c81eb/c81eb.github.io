@@ -84,13 +84,15 @@
             img: img,
             caption: val('caption'),
             statement: val('statement'),
-            personalBackground: val('personalBackground'),
-            professionalBackground: val('professionalBackground'),
-            academicBackground: val('academicBackground'),
+            personalInfo: {
+                personalBackground: val('personalBackground'),
+                professionalBackground: val('professionalBackground'),
+                academicBackground: val('academicBackground'),
+                primaryWorkComputer: val('primaryWorkComputer'),
+                primaryWorkLocation: val('primaryWorkLocation'),
+                alternateComputerLocation: val('alternateComputerLocation')
+            },
             subjectBackground: val('subjectBackground'),
-            primaryWorkComputer: val('primaryWorkComputer'),
-            primaryWorkLocation: val('primaryWorkLocation'),
-            alternateComputerLocation: val('alternateComputerLocation'),
             courses: courses,
             quote: val('quote'),
             quoteAuthor: val('quoteAuthor'),
@@ -111,6 +113,7 @@
 
     // ---------- HTML ----------
     function buildHTML(d) {
+        const p = d.personalInfo;
         const lines = [];
         lines.push('<h2>Introduction</h2>');
         lines.push('<h6>' + esc(fullName(d)) + ' ' + esc(d.prettyNameDivider) + ' ' +
@@ -122,13 +125,13 @@
         lines.push('</figure>');
         lines.push('');
         lines.push('<ul>');
-        lines.push('    <li><strong>Personal Background:</strong> ' + esc(d.personalBackground) + '</li>');
-        lines.push('    <li><strong>Professional Background:</strong> ' + esc(d.professionalBackground) + '</li>');
-        lines.push('    <li><strong>Academic Background:</strong> ' + esc(d.academicBackground) + '</li>');
+        lines.push('    <li><strong>Personal Background:</strong> ' + esc(p.personalBackground) + '</li>');
+        lines.push('    <li><strong>Professional Background:</strong> ' + esc(p.professionalBackground) + '</li>');
+        lines.push('    <li><strong>Academic Background:</strong> ' + esc(p.academicBackground) + '</li>');
         lines.push('    <li><strong>Background in this Subject:</strong> ' + esc(d.subjectBackground) + '</li>');
-        lines.push('    <li><strong>Primary Work Computer:</strong> ' + esc(d.primaryWorkComputer) + '</li>');
-        lines.push('    <li><strong>Primary Work Location:</strong> ' + esc(d.primaryWorkLocation) + '</li>');
-        lines.push('    <li><strong>Alternate Computer:</strong> ' + esc(d.alternateComputerLocation) + '</li>');
+        lines.push('    <li><strong>Primary Work Computer:</strong> ' + esc(p.primaryWorkComputer) + '</li>');
+        lines.push('    <li><strong>Primary Work Location:</strong> ' + esc(p.primaryWorkLocation) + '</li>');
+        lines.push('    <li><strong>Alternate Computer:</strong> ' + esc(p.alternateComputerLocation) + '</li>');
         lines.push('    <li><strong>Courses I\'m Taking &amp; Why:</strong>');
         lines.push('        <ol>');
         d.courses.forEach(function (c) {
@@ -176,11 +179,17 @@
 
         ['firstName', 'middleName', 'nickname', 'lastName', 'acknowledgment',
             'acknowledgmentDate', 'adjectives', 'animal', 'prettyNameDivider', 'img',
-            'caption', 'statement', 'personalBackground', 'professionalBackground',
-            'academicBackground', 'subjectBackground', 'primaryWorkComputer',
-            'primaryWorkLocation', 'alternateComputerLocation'].forEach(function (k) {
+            'caption', 'statement'].forEach(function (k) {
             lines.push(tag(k, d[k], '    '));
         });
+
+        lines.push('    <personalInfo>');
+        ['personalBackground', 'professionalBackground', 'academicBackground',
+            'primaryWorkComputer', 'primaryWorkLocation', 'alternateComputerLocation'].forEach(function (k) {
+            lines.push(tag(k, d.personalInfo[k], '        '));
+        });
+        lines.push('    </personalInfo>');
+        lines.push(tag('subjectBackground', d.subjectBackground, '    '));
 
         lines.push('    <courses>');
         d.courses.forEach(function (c) {
