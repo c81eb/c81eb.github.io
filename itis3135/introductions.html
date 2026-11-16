@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caleb Gilmore's Clever Gecko | ITIS3135 | Class Introductions</title>
+    <link rel="icon" href="images/favicon.png">
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        /* Layout only: colors and fonts are inherited from styles/default.css so the page matches the rest of the site. */
+        .controls { display: flex; flex-wrap: wrap; gap: 0.75rem; margin: 1rem 0; align-items: center; }
+        .controls input { flex: 1 1 14rem; }
+        #intro-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); gap: 1rem; padding: 0; list-style: none; }
+        .intro-card { border: 1px solid currentColor; border-radius: 6px; padding: 0.75rem; }
+        .intro-card figure { margin: 0; }
+        .intro-card img { width: 100%; aspect-ratio: 1 / 1; object-fit: cover; border-radius: 4px; }
+        .intro-card figcaption { font-size: 0.85rem; opacity: 0.8; margin-top: 0.25rem; }
+        .intro-card .name { margin: 0.6rem 0 0.2rem; }
+        .intro-card .tag { margin: 0; font-style: italic; }
+        .intro-card blockquote { margin: 0.6rem 0 0; padding-left: 0.75rem; border-left: 3px solid currentColor; }
+        .intro-card .fun { margin: 0.6rem 0 0; font-size: 0.9rem; }
+    </style>
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div data-include="components/header.html"></div>
+    <main>
+        <!-- Comment: the div with class "controls" groups the search box and the sort menu so they sit side by side on one row; a div is needed because there is no semantic element for a group of controls. id "search" and id "sort" are the controls scripts/introductions.js listens to. id "status" shows loading, error and result-count messages. id "intro-grid" is the list the script fills with one card per classmate, using data fetched from the class server. -->
+        <h2>Class Introductions</h2>
+        <h3>Pulled Live From the Class Server</h3>
+
+        <div class="controls">
+            <label>Search: <input type="search" id="search" placeholder="Name, adjective, animal, or quote"></label>
+            <label>Sort by:
+                <select id="sort">
+                    <option value="newest">Newest first</option>
+                    <option value="name">Name (A–Z)</option>
+                    <option value="animal">Animal (A–Z)</option>
+                </select>
+            </label>
+        </div>
+
+        <p id="status" role="status" aria-live="polite">Loading introductions…</p>
+        <ul id="intro-grid"></ul>
+    </main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.min.js"></script>
+<script src="scripts/introductions.js"></script>
+</body>
+</html>
