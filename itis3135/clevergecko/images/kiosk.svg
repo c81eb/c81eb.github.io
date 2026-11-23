@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+    <title>Clever Gecko kiosk</title>
+    <rect width="400" height="260" fill="#f4fadc"/>
+    <rect y="220" width="400" height="40" fill="#1f3d1a"/>
+    <rect x="120" y="105" width="160" height="115" fill="#fff3a3" stroke="#1f3d1a" stroke-width="4"/>
+    <rect x="100" y="60" width="200" height="45" fill="#b7e33b" stroke="#1f3d1a" stroke-width="4"/>
+    <path d="M100 105 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0 q12.5 18 25 0"
+          fill="#ff8a5c" stroke="#1f3d1a" stroke-width="4"/>
+    <circle cx="180" cy="48" r="14" fill="#fff3a3" stroke="#1f3d1a" stroke-width="4"/>
+    <circle cx="220" cy="48" r="14" fill="#fff3a3" stroke="#1f3d1a" stroke-width="4"/>
+    <circle cx="182" cy="49" r="5" fill="#1f3d1a"/>
+    <circle cx="218" cy="49" r="5" fill="#1f3d1a"/>
+    <rect x="150" y="135" width="100" height="34" rx="4" fill="#1f3d1a"/>
+    <text x="200" y="158" text-anchor="middle" font-family="Trebuchet MS, sans-serif" font-size="15" font-weight="bold" fill="#fff3a3">Clever Gecko</text>
+    <rect x="110" y="190" width="180" height="14" fill="#ff8a5c" stroke="#1f3d1a" stroke-width="3"/>
+</svg>

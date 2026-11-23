@@ -1,33 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Clever Gecko's Stick-Ups | Clever Gecko Products</title>
-<link rel="icon" href="../images/favicon.png">
-<link rel="stylesheet" href="styles/default.css">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;700&amp;display=swap" rel="stylesheet">
-<script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
-<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clever Gecko's Stick-Ups | Clever Gecko Products</title>
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;family=Fredoka:wght@400;500;700&amp;display=swap" rel="stylesheet">
+    <script src="https://divonbriesen.github.io/teaching/tools/standards-check.js" defer></script>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<div data-include="components/header.html"></div>
-<main>
-<section>
-<h2>Clever Gecko Products</h2>
-<figure>
-<img src="images/gecko.svg" alt="Cartoon gecko clinging to a yellow sticky note" width="400" height="260">
-<figcaption>Our founder, hard at work.</figcaption>
-</figure>
-<p>We keep our inventory small on purpose, so every item is one we trust.</p>
-<article><h3>Removable Wall Hooks</h3><p>Hang keys, posters, and towels, then peel them off without paint damage.</p></article>
-<article><h3>Gel Phone Grips</h3><p>A tacky gel pad that holds your phone to a desk, dashboard, or mirror.</p></article>
-<article><h3>Reusable Adhesive Pads</h3><p>Rinse them under water and they grip again, just like a gecko toe.</p></article>
-<article><h3>Sticky-Note Sets</h3><p>Bright pads in lime, yellow, and orange for lists and reminders.</p></article>
-</section>
-</main>
-<div data-include="components/footer.html"></div>
-<script src="../scripts/HTMLInclude.min.js"></script>
+    <div data-include="components/header.html"></div>
+    <main>
+        <section>
+            <h2>Clever Gecko Products</h2>
+            <figure>
+                <img src="images/items.svg" alt="Four product tiles labeled Hooks, Grips, Pads, and Notes" width="400" height="260">
+                <figcaption>All four Clever Gecko products, lined up and ready to stick.</figcaption>
+            </figure>
+            <p>We keep our inventory small on purpose, so every item is one we trust.</p>
+            <p>Not sure which one you need? Type a word below and the list will narrow as you type.</p>
+            <!-- IDs needed: products.js uses these ids to find the search box and the status message -->
+            <label for="product-search">Search our products</label>
+            <input type="search" id="product-search" placeholder="Try &quot;phone&quot; or &quot;wall&quot;">
+            <p id="search-status" aria-live="polite">Showing all 4 products.</p>
+            <article>
+                <h3>Removable Wall Hooks</h3>
+                <p>Hang keys, posters, and towels, then peel them off without paint damage.</p>
+            </article>
+            <article>
+                <h3>Gel Phone Grips</h3>
+                <p>A tacky gel pad that holds your phone to a desk, dashboard, or mirror.</p>
+            </article>
+            <article>
+                <h3>Reusable Adhesive Pads</h3>
+                <p>Rinse them under water and they grip again, just like a gecko toe.</p>
+            </article>
+            <article>
+                <h3>Sticky-Note Sets</h3>
+                <p>Bright pads in lime, yellow, and orange for lists and reminders.</p>
+            </article>
+        </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="scripts/products.js"></script>
 </body>
 </html>

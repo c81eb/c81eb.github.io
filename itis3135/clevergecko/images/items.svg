@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 260">
+    <title>Four Clever Gecko products</title>
+    <rect width="400" height="260" fill="#f4fadc"/>
+    <!-- Wall hook -->
+    <rect x="20" y="70" width="80" height="100" rx="8" fill="#b7e33b" stroke="#1f3d1a" stroke-width="4"/>
+    <path d="M60 90 v40 q0 22 -18 22" fill="none" stroke="#1f3d1a" stroke-width="7" stroke-linecap="round"/>
+    <!-- Phone grip -->
+    <rect x="115" y="70" width="80" height="100" rx="8" fill="#ff8a5c" stroke="#1f3d1a" stroke-width="4"/>
+    <rect x="135" y="82" width="40" height="76" rx="8" fill="#1f3d1a"/>
+    <rect x="141" y="90" width="28" height="52" rx="3" fill="#fff3a3"/>
+    <!-- Adhesive pad -->
+    <rect x="210" y="70" width="80" height="100" rx="8" fill="#fff3a3" stroke="#1f3d1a" stroke-width="4"/>
+    <circle cx="250" cy="120" r="26" fill="#b7e33b" stroke="#1f3d1a" stroke-width="4"/>
+    <circle cx="250" cy="120" r="9" fill="none" stroke="#1f3d1a" stroke-width="3"/>
+    <!-- Sticky notes -->
+    <rect x="305" y="70" width="80" height="100" rx="8" fill="#b7e33b" stroke="#1f3d1a" stroke-width="4"/>
+    <rect x="320" y="85" width="50" height="50" fill="#fff3a3" stroke="#1f3d1a" stroke-width="3"/>
+    <line x1="328" y1="100" x2="362" y2="100" stroke="#1f3d1a" stroke-width="3"/>
+    <line x1="328" y1="112" x2="356" y2="112" stroke="#1f3d1a" stroke-width="3"/>
+    <line x1="328" y1="124" x2="350" y2="124" stroke="#1f3d1a" stroke-width="3"/>
+    <!-- Labels -->
+    <g font-family="Trebuchet MS, sans-serif" font-size="15" fill="#1f3d1a" text-anchor="middle">
+        <text x="60" y="198">Hooks</text>
+        <text x="155" y="198">Grips</text>
+        <text x="250" y="198">Pads</text>
+        <text x="345" y="198">Notes</text>
+    </g>
+</svg>

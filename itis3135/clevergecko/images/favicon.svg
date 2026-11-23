@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <title>Clever Gecko favicon</title>
+    <rect width="64" height="64" rx="14" fill="#b7e33b"/>
+    <circle cx="22" cy="26" r="10" fill="#fff3a3" stroke="#1f3d1a" stroke-width="3"/>
+    <circle cx="42" cy="26" r="10" fill="#fff3a3" stroke="#1f3d1a" stroke-width="3"/>
+    <circle cx="24" cy="27" r="4" fill="#1f3d1a"/>
+    <circle cx="40" cy="27" r="4" fill="#1f3d1a"/>
+    <path d="M16 44 Q32 56 48 44" fill="none" stroke="#1f3d1a" stroke-width="4" stroke-linecap="round"/>
+</svg>
